@@ -4,6 +4,7 @@ import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import comun.Mensaje;
 import comun.Hilo;
@@ -94,9 +95,12 @@ public class Servidor implements AutoCloseable {
         if (estaba) aviso(cliente.getNombreUsuario() + " ha salido del chat.");
     }
     public synchronized void anotar(String tipo, String texto) {
-        String linea = LocalDateTime.now() + " [" + tipo + "] "
-                + texto.replace("\n", " ").replace("\r", " ");
-        System.out.println(linea);
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+
+        String fecha = LocalDateTime.now().format(formato);
+
+        String linea = fecha + " [" + tipo + "] " + texto.replace("\n", " ").replace("\r", " ");
+        
         try {
             escritor.write(linea);
             escritor.newLine();
@@ -106,6 +110,7 @@ public class Servidor implements AutoCloseable {
         }
     }
     public synchronized void mostrarEstadisticas() {
+        System.out.println("");
         System.out.println("--- ESTADO DEL SERVIDOR ---");
         System.out.println("Usuarios conectados: " + usuarios.size() + " / " + MAX_CLIENTES);
         System.out.println("Conexiones ocupadas (incluye pendientes): " + conexiones.size());
