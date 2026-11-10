@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cliente.PrimaryController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0" VBox.vgrow="NEVER">
+         <children>
+            <Label text="IP:" />
+            <TextField fx:id="txtIp" maxWidth="100.0" text="127.0.0.1">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Puerto:">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtPuerto" maxWidth="50.0" text="5000">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label text="Usuario:">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtUsuario" maxWidth="100.0">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="btnConectar" mnemonicParsing="false" onAction="#accionConectar" text="Conectar">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnDesconectar" disable="true" mnemonicParsing="false" onAction="#accionDesconectar" text="Desconectar">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="lblEstado" text="No conectado" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="253.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TextArea fx:id="txtAreaChat" editable="false" prefWidth="630.0" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+         <children>
+            <CheckBox fx:id="chkPrivado" mnemonicParsing="false" onAction="#accionTogglePrivado" text="Privado">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </CheckBox>
+            <Label text="Para:">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtDestinatario" disable="true" maxWidth="100.0" />
+            <TextField fx:id="txtMensaje" maxWidth="330.0" prefWidth="330.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="btnEnviar" mnemonicParsing="false" onAction="#accionEnviar" text="Enviar">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

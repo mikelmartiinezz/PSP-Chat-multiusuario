@@ -1,15 +1,5 @@
-2026-10-29T13:54:47.9068835+01:00 [ENTRADA] Usuario conectado: mikel
-2026-10-29T13:54:47.915681+01:00 [PUBLICO] SISTEMA: mikel se ha unido al chat.
-2026-10-29T13:54:50.706673+01:00 [PUBLICO] mikel: gfffdg
-2026-10-29T13:55:01.2446734+01:00 [ENTRADA] Usuario conectado: asier
-2026-10-29T13:55:01.2446734+01:00 [PUBLICO] SISTEMA: asier se ha unido al chat.
-2026-10-29T13:55:18.7354087+01:00 [PRIVADO] asier -> mikel: sfds
-2026-10-29T13:57:07.3166059+01:00 [ENTRADA] Usuario conectado: ekain
-2026-10-29T13:57:07.3179579+01:00 [PUBLICO] SISTEMA: ekain se ha unido al chat.
-2026-10-29T13:57:10.5832152+01:00 [SALIDA] Usuario desconectado: ekain
-2026-10-29T13:57:10.5832152+01:00 [PUBLICO] SISTEMA: ekain ha salido del chat.
-2026-10-29T14:08:22.4433413+01:00 [ENTRADA] Usuario conectado: ricardosouza
-2026-10-29T14:08:22.450885+01:00 [PUBLICO] SISTEMA: ricardosouza se ha unido al chat.
-2026-10-29T14:08:28.5274272+01:00 [PRIVADO] ricardosouza -> mikel: szd
-2026-10-29T14:08:55.2921166+01:00 [SALIDA] Usuario desconectado: ricardosouza
-2026-10-29T14:08:55.2933359+01:00 [PUBLICO] SISTEMA: ricardosouza ha salido del chat.
+2026-11-10T13:14:28.642488500 [ENTRADA] mikel
+2026-11-10T13:14:35.238272100 [ERROR] Privado de mikel: destinatario inexistente
+2026-11-10T13:21:44.133730400 [ENTRADA] lenneth
+2026-11-10T13:21:52.531318 [PUBLICO] lenneth: hola
+2026-11-10T13:21:57.511378400 [SALIDA] lenneth
